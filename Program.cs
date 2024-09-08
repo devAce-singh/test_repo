@@ -8,7 +8,7 @@ app.MapPost("/", async webhookPayload => {
     Console.WriteLine("webhookPayload Request : " + webhookPayload.Request);
     Console.WriteLine($"webhookPayload Request Header: {webhookPayload.Request.Headers}, webhookPayload Request Body: {webhookPayload.Request.Body}");
 
-    webhookPayload.Response.StatusCode = 200;
+    webhookPayload.Response.StatusCode = 400;
     await webhookPayload.Response.WriteAsync("Webhook Calling Successfully!");
 });
 
